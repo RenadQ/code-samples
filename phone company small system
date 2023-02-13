@@ -1,57 +1,125 @@
+
 #include <iostream>
 #include <string>
 using namespace std ;
 //Renad turki alkahtani -2220003572
 
 int main() {
-	const double tax=1.15;
-	const double SR=3.75;
-	string coustmer_name;
+	const double tax=1.15; //tax=15*100
+	const double SR=3.75; //the change between 
+	string coustmer_name;//take user input as string
 	int min ,plan=0 ;
-//	char plan; 
 	double line=60.0 ,ph_bill ,totall_1,totall_2 ;
+	char anw ;
 	
 	cout<<"welcome to Renad phone company \n pls enter your name :"<<endl;
-	getline(cin,coustmer_name);
+	getline(cin,coustmer_name);//take all the user input with space(firstname and last)
 	
-	cout<<"please enter your minute of call"<<endl;
-	cin>>min;
-	 ph_bill= min/ 6 ;
-	 totall_1=(ph_bill+line)*tax;
 	 
-	 if(totall_1>=200){
+	 do {//start one time at least so that why i use do-while
+	 
+	cout<<"please enter your minute of call"<<endl;
+	cin>>min;//take the min of call
+	 ph_bill= min/ 6 ; //10 for hour and i need to chande to min so 10/60 so i can write it in short way divided by 6
+	 totall_1=(ph_bill+line)*tax;//ater find the min cost we need to add the line first then multbly by the tax value
+	 
+	 if(totall_1>=200){//the compny ofer this when the total>=200 to left the user pic a plan
+	 	
 	 	cout<<"you will upgrade to our intrenet subscription plans please choose one:"<<endl;
 	 	cout<<"1- 10 Mb and unlimited social media for $25." 
 		    <<endl<<"2- 30 Mb and unlimited social media for $50." 
 		     <<endl<<"3- 50 Mb and unlimited social media for $70" <<endl
-		     <<"pls choose one plane by enter numbers(1-2-3) \n";
+		     <<"pls choose one plane by enter numbers(1-2-3) \n";//i put achoices to be only numbers 1-2-3 to pic a plan
 		     cin>>plan;
 		     
 		     if(plan==1){
 		     	plan=1;
-		     	totall_2=totall_1+25;
+		     	totall_2=totall_1+25;//add 25 to the total when user pics plan 1
 			 }
 			 else if(plan==2){
 		     	plan=2;
-		     	totall_2=totall_1+50;
+		     	totall_2=totall_1+50;//add 50 to the total when user pics plan 2
 			 }
 			 
 			 else if (plan==3){
 		     	plan=3;
-		     	totall_2=totall_1+70;
+		     	totall_2=totall_1+70;//add 70 to the total when user pics plan 3
 			 }
+			 
 	 }
 	 
-			
-	 cout<<"coustmer information table: "<<endl;
-	 cout<<"---------------------------------------------------------"<<endl;
-	cout<<"coustemer name :"<<"\t"<<coustmer_name<<endl;
-	cout<<"the total of call cost is :"<<"\t""|"<<"$" <<ph_bill<<endl;
-	cout<<"Liner rental is :"<<"\t""|"<<"$"<<line<<endl;
-	cout<<" Internet subscrition plan is :"<<"\t""|"<<"plan "<<plan<<endl;
-	cout<<"total bill is :"<<"\t""|"<<totall_2*SR<<endl;
-	cout<<"---------------------------------------------------------"<<endl;
+	 
+	 
+	 
+	 
+	 if ((plan==1)||(plan==2)||(plan==3)){//if the user can pic a plan the out put will put aplan line
+	 
+	cout<<"----------------------------------------------------------"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;		
+	 cout<<"coustmer information table: "<<"\t \t \t \t |"<<endl;
+	 cout<<"\t \t \t \t \t \t \t |"<<endl;
+	 cout<<"\t \t \t \t \t \t \t |"<<endl;
+	 cout<<"_________________________________________________________|"<<endl;
+	 cout<<"\t \t \t \t \t \t \t |"<<endl;;
+	cout<<"coustemer name :"<<coustmer_name<<"\t \t \t \t \t |"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+     cout<<"_________________________________________________________|"<<endl;
+     cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"the total of call cost is :"<<"$" <<ph_bill<<"\t \t \t \t |"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+     cout<<"_________________________________________________________|"<<endl;
+     cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"Liner rental is :"<<"$"<<line<<"\t \t \t \t \t |"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+     cout<<"_________________________________________________________|"<<endl;
+     cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<" Internet subscrition plan is :"<<"plan "<<plan<<"\t \t\t |"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+     cout<<"_________________________________________________________|"<<endl;
+     cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"total bill is :"<<totall_2*SR<<"\t \t \t \t \t |"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"_________________________________________________________|"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"do you want to add a new bill"<<endl;
+	cin>>anw;
+}
+
+else{//if the user didnt enter the plan if i will remove plan line output
+		cout<<"----------------------------------------------------------"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;		
+	 cout<<"coustmer information table: "<<"\t \t \t \t |"<<endl;
+	 cout<<"\t \t \t \t \t \t \t |"<<endl;
+	 cout<<"\t \t \t \t \t \t \t |"<<endl;
+	 cout<<"_________________________________________________________|"<<endl;
+	 cout<<"\t \t \t \t \t \t \t |"<<endl;;
+	cout<<"coustemer name :"<<coustmer_name<<"\t \t \t \t \t |"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+     cout<<"_________________________________________________________|"<<endl;
+     cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"the total of call cost is :"<<"$" <<ph_bill<<"\t \t \t \t |"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+     cout<<"_________________________________________________________|"<<endl;
+     cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"Liner rental is :"<<"$"<<line<<"\t \t \t \t \t |"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+     cout<<"_________________________________________________________|"<<endl;
+     
+     
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+     cout<<"_________________________________________________________|"<<endl;
+     cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"total bill is :"<<totall_1*SR<<"\t \t \t \t \t |"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"_________________________________________________________|"<<endl;
+	cout<<"\t \t \t \t \t \t \t |"<<endl;
+	cout<<"do you want to add a new bill"<<endl;//if the user want to add more info again the loop will start again
+	cin>>anw;
 	
+}
+	
+}
+	while((anw=='y'||anw=='Y')&&(anw!='n'||anw!='N')) ;//the loop condition to start again from do line
 	
 	return 0;
 }
