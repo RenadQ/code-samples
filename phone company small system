@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+using namespace std ;
+//Renad turki alkahtani -2220003572
+
+int main() {
+	const double tax=1.15;
+	const double SR=3.75;
+	string coustmer_name;
+	int min ,plan=0 ;
+//	char plan; 
+	double line=60.0 ,ph_bill ,totall_1,totall_2 ;
+	
+	cout<<"welcome to Renad phone company \n pls enter your name :"<<endl;
+	getline(cin,coustmer_name);
+	
+	cout<<"please enter your minute of call"<<endl;
+	cin>>min;
+	 ph_bill= min/ 6 ;
+	 totall_1=(ph_bill+line)*tax;
+	 
+	 if(totall_1>=200){
+	 	cout<<"you will upgrade to our intrenet subscription plans please choose one:"<<endl;
+	 	cout<<"1- 10 Mb and unlimited social media for $25." 
+		    <<endl<<"2- 30 Mb and unlimited social media for $50." 
+		     <<endl<<"3- 50 Mb and unlimited social media for $70" <<endl
+		     <<"pls choose one plane by enter numbers(1-2-3) \n";
+		     cin>>plan;
+		     
+		     if(plan==1){
+		     	plan=1;
+		     	totall_2=totall_1+25;
+			 }
+			 else if(plan==2){
+		     	plan=2;
+		     	totall_2=totall_1+50;
+			 }
+			 
+			 else if (plan==3){
+		     	plan=3;
+		     	totall_2=totall_1+70;
+			 }
+	 }
+	 
+			
+	 cout<<"coustmer information table: "<<endl;
+	 cout<<"---------------------------------------------------------"<<endl;
+	cout<<"coustemer name :"<<"\t"<<coustmer_name<<endl;
+	cout<<"the total of call cost is :"<<"\t""|"<<"$" <<ph_bill<<endl;
+	cout<<"Liner rental is :"<<"\t""|"<<"$"<<line<<endl;
+	cout<<" Internet subscrition plan is :"<<"\t""|"<<"plan "<<plan<<endl;
+	cout<<"total bill is :"<<"\t""|"<<totall_2*SR<<endl;
+	cout<<"---------------------------------------------------------"<<endl;
+	
+	
+	return 0;
+}
