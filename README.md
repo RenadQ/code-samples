@@ -26,3 +26,11 @@ g++ projects/phone_billing_system.cpp -o phone_billing
 ## 🧠 Concepts practiced
 
 Pointers · dynamic memory (`new` / `delete`) · `typedef` · 1D & 2D arrays · functions · loops (`for`, `do-while`) · conditionals · strings & `getline` · input/output formatting
+
+---
+
+<details>
+<summary>🇸🇦 ملخص بالعربي</summary>
+
+برامج C++ صغيرة كتبتها في ٢٠٢٢ وأنا أتعلم الأساسيات: المؤشرات، والذاكرة الديناميكية، والمصفوفات، والحلقات، ومشروعين صغار مثل نظام فواتير لشركة اتصالات.
+</details>
